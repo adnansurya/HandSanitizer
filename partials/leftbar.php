@@ -6,28 +6,7 @@
                 <a class="nav-link" href="index.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
-                </a>  
-                <?php if(isset($_SESSION['login_user'])){if($_SESSION['login_role'] == 'petugas'){  ?>  
-                <div class="sb-sidenav-menu-heading">Petugas</div>                                  
-                <a class="nav-link" href="penerima.php">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Daftar Penerima
-                </a>
-                <a class="nav-link" href="user.php">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    User
-                </a>
-                <a class="nav-link" href="zakat_masuk.php">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Zakat Masuk 
-                </a>
-                <?php } } ?>
-                <div class="sb-sidenav-menu-heading">USER</div>                                  
-                <a class="nav-link" href="zakat.php">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Zakat
-                </a>
-                   
+                </a>                                    
             </div>
         </div>
         <!-- <div class="sb-sidenav-footer">
