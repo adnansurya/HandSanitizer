@@ -6,7 +6,7 @@ if(isset($_GET['suhu']) && isset($_GET['cairan'])){
 
     $waktu = $date->format('Y-m-d H:i:s');
 
-    $sql = "INSERT INTO log_action (suhu, cairan, waktu) VALUES ('".$_GET['suhu']."','".$_GET['cairan']."','".$waktu."')";
+    $sql = "INSERT INTO log_action (suhu, cairan, cairan_max, cairan_min, waktu) VALUES ('".$_GET['suhu']."','".$_GET['cairan']."','".$_GET['max']."','".$_GET['min']."','".$waktu."')";
 
         
     if(!mysqli_query($conn, $sql)){
