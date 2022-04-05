@@ -1,5 +1,6 @@
 <?php
 
+//fungsi untuk mengubah teks waktu ke dalam bahasa Indonesia
 function tglWaktuIndo($tglWaktu){
     $pisahSpasi =  explode(' ', $tglWaktu);
     $tanggal = $pisahSpasi[0];
@@ -32,17 +33,19 @@ function tglWaktuIndo($tglWaktu){
 	
 }
 
+
+//fungsi untuk menampilkan teks status cairan
 function statCairan($cairan, $cairMax, $cairMin){
 
-    $batasPenuh = $cairMax * 0.9;
+    $batasPenuh = $cairMax * 0.9; //batas penuh adalah 90%
     $status = 'Error';
 
     if($cairan < $cairMin){
-        $status = 'Kosong';
+        $status = 'Kosong';  //'Kosong' jika nilai ADC di bawah nilai minimal
     }elseif($cairan >= $cairMin && $cairan <= $batasPenuh){
-        $status = 'Normal';
+        $status = 'Normal'; //'Normal jika nilai ADC di antara nilai minimal dan batas penuh
     }elseif($cairan > $batasPenuh){
-        $status = 'Penuh';
+        $status = 'Penuh'; //'Penuh jika nilai ADC melebihi batas penuh
     }
 
     return $status;
